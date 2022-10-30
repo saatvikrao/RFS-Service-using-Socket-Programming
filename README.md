@@ -1,7 +1,7 @@
 # RFS-Service-using-Socket-Programming
 Network Application using Socket Programming 
 
-## Goal: 
+## Goal 
 Develop a simple remote file system service (RFS) and understand the principles of layered network architecture. The application supports the following 5 commands that the client can perform: 
 1. CWD : Retrieve the path of the current working directory for the user 
 2. LS : List the files/folders present in the current working directory 
@@ -9,7 +9,7 @@ Develop a simple remote file system service (RFS) and understand the principles 
 4. DWD <file> : Download the <file> specified by the user on server to client 
 5. UPD <file> : Upload the <file> on client to the remote server in CWD 
 
-## A Template Layer N model of the RFS client and server;
+## A Template Layer N model of the RFS client and server 
 ### Top most layer: 
   File Service will ensure to exercise the requested RFS command and take use of the associated OS API’s on the client/server for file operations and rely on the underlying Crypto service to encode/encrypt and decode/decrypt the contents at either ends of the client.
 
@@ -20,3 +20,7 @@ Develop a simple remote file system service (RFS) and understand the principles 
 say Caesar cipher with offset 2. Example ARTZ will be substituted with CTVB
 3. Transpose → Revere the contents in a word by word manner. Example ARTZ will
 be substituted with ZTRA.
+
+## Instructions 
+Download the server and client folder inside the assignment-1 folder. Two files, s.txt and up.txt, are sample files for testing the download and upload commands.
+Open two terminal windows. First, run the server.py file and then the client.py file. Once the connection is established, one can test the command inputs as specified in the Assignment document provided. Screenshots have also been provided for understanding the means to compile and execute the commands. 
