@@ -10,9 +10,11 @@ Develop a simple remote file system service (RFS) and understand the principles 
 5. UPD <file> : Upload the <file> on client to the remote server in CWD 
 
 ## A Template Layer N model of the RFS client and server;
-### Top most layer: File Service will ensure to exercise the requested RFS command and take use of the associated OS API’s on the client/server for file operations and rely on the underlying Crypto service to encode/encrypt and decode/decrypt the contents at either ends of the client.
+### Top most layer: 
+  File Service will ensure to exercise the requested RFS command and take use of the associated OS API’s on the client/server for file operations and rely on the underlying Crypto service to encode/encrypt and decode/decrypt the contents at either ends of the client.
 
-### Crypto Layer: This will facilitate 3 options (Plain Text, Substitute, Transpose modes) to mangle the data before transmitting to the networking layer.
+### Crypto Layer: 
+  This will facilitate 3 options (Plain Text, Substitute, Transpose modes) to mangle the data before transmitting to the networking layer.
 1. Plain text → No change to the input; (No encryption or decryption)
 2. Substitute → Only alphanumeric characters will be substituted with fixed offset,
 say Caesar cipher with offset 2. Example ARTZ will be substituted with CTVB
